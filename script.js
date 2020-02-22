@@ -22,6 +22,8 @@ function writePassword() {
     var uppercase = confirm(`Do you want password to contain uppercase letters?`)
     var numbers = confirm(`Do you want password to contain numbers?`)
     var specialCharacter = confirm(`Do you want password to contain special characters?`)
+    
+    
   }
   else {
     alert(`Password must be between 8 and 128 characters!`)
@@ -39,12 +41,15 @@ function writePassword() {
   if(specialCharacter == true) {
     characters = characters + specialCharacterList
   }
+  else {
+    alert('At least one character type should be selected!')
+  }
 
 
 
   function generatePassword(){
   
-    var result           = 'You new password is: ';
+    var result           = '';
     
     var charactersLength = characters.length;
     var numbersLength = numberList.length
