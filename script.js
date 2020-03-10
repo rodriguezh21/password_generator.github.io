@@ -28,7 +28,9 @@ function writePassword() {
     alert(`Password must be between 8 and 128 characters!`)
   }
   
-  
+  if(lowercase == true) {
+    characters = characters + lowercaseLetter
+  }
   if(uppercase == true) {
     characters = characters + uppercaseLetter 
   }
@@ -38,15 +40,9 @@ function writePassword() {
   if(specialCharacter == true) {
     characters = characters + specialCharacterList
   }
-  if(lowercase == true) {
-    characters = characters + lowercaseLetter
-  }
+  
 
   
-  
-  else {
-    alert(`You must select at least one character type, try again!`)
-  }
 
 
   function generatePassword(){
